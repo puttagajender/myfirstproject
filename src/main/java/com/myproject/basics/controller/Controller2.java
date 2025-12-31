@@ -14,7 +14,7 @@ public class Controller2 {
     }
     @GetMapping("/hello")
     public String hello() {
-        System.out.println("api/v2/hello called and hashcode is "+ service.hashCode());
+        System.out.println("api/v2/hello called and hashcode is "+System.identityHashCode(service));
         return service.getGreeting();
     }
 }
